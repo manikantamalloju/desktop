@@ -1,0 +1,17 @@
+{
+  "name": "desktop-weather-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "cd ../web && npm install && npm run build && cd ../desktop && rm -rf ./builder && rm -rf ./dist && mkdir -p ./builder && cp -a ../web/build/. ./builder && electron-builder"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "electron-is-dev": "^3.0.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^25.0.5",
+    "electron": "^32.1.2"
+  }
+}
